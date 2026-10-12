@@ -15,6 +15,16 @@
 
 ![Clinical Trial Intelligence Walkthrough](../assets/demo/clinical_trial_intelligence_walkthrough.webp)
 
+### 📋 Workflow Capabilities Demonstrated
+
+| Step | Feature | Technical Implementation | Value to ClinOps |
+| :---: | :--- | :--- | :--- |
+| **01** | **Oncology Protocol Explorer** | Ingestion of NSCLC (`NCT-05128890`) & synthetic patient EHR cohorts | Instant view of TNM stages, prior chemotherapies, and biomarker profiles. |
+| **02** | **Explainable Verification Matrix** | Atomic inclusion/exclusion matching via deterministic logic + Sarvam-105b | Eliminates black boxes; outputs granular `PASS`, `FAIL`, or `UNKNOWN` tags per criterion. |
+| **03** | **Human Reviewer Sign-Off Modal** | Strict `CLINICAL_REVIEWER` RBAC gate with mandatory clinical rationale capture | 21 CFR Part 11 compliant audit trail; prevents unverified algorithmic enrollment. |
+| **04** | **Site Accrual Risk Forecaster** | XGBoost / Gradient Boosting site risk classification | Forecasts >20% enrollment failure probability 60–90 days ahead of deadlines. |
+| **05** | **Safe ClinOps NL2SQL** | Parameterized query generator with schema allowlisting | Safe ad-hoc plain-English queries over patient cohorts and site metrics. |
+
 <details>
 <summary>📸 View Key Workflow Screenshots</summary>
 

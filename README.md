@@ -60,12 +60,22 @@ graph TD
 
 ---
 
-## 🎥 Live Interactive Walkthrough & UI Showcase
+<a id="live-demo"></a>
+## 🎥 Live Interactive Walkthrough & Demonstration
 
-> **Full Clinical Trial Intelligence & Patient-Trial Matching Flow**:
-> Demonstrates real-time patient EHR eligibility screening, criterion verification matrix (`PASS`/`FAIL`/`UNKNOWN`), human-in-the-loop regulatory sign-off dialog, machine learning site risk radar, and read-only ClinOps NL2SQL querying:
+> **Watch the End-to-End Workflow**: The animated interactive walkthrough below captures a complete clinical operations lifecycle inside **03 — Clinical Trial Intelligence & Patient Matching Platform**.
 
 ![Clinical Trial Intelligence Live Walkthrough](assets/demo/clinical_trial_intelligence_walkthrough.webp)
+
+### 📋 Key Features & Capabilities Demonstrated in the Walkthrough
+
+| Workflow Step | Feature Name | Technical Mechanism | Clinical / Business Value |
+| :---: | :--- | :--- | :--- |
+| **01** | **Protocol & Cohort Explorer** | Protocol parsing over Phase III NSCLC (`NCT-05128890`) and synthetic oncology EHR database | Instant indexing of structured histology, TNM staging, lab panels, and prior lines of therapy. |
+| **02** | **Explainable Criterion Verification Matrix** | Deterministic rule execution + Sarvam-105b semantic reasoning over inclusion/exclusion criteria | Replaces black-box matching with explicit line-level **PASS**, **FAIL**, or **UNKNOWN** (e.g. missing PD-L1/EGFR) flags. |
+| **03** | **Human-in-the-Loop Regulatory Gate** | Role-Gated `CLINICAL_REVIEWER` sign-off modal with mandatory rationale justification | Enforces FDA 21 CFR Part 11 compliance; ensures algorithm never enrolls patients without signed clinician sign-off. |
+| **04** | **Predictive Site Risk Forecaster** | XGBoost / Gradient Boosting Classifier trained on site operational telemetry | Predicts probability of clinical sites missing accrual targets by >20% up to 90 days in advance to prevent delays. |
+| **05** | **Safe ClinOps NL2SQL Copilot** | Read-only SQL translator with AST validation, table allowlisting, and parameterized queries | Allows study coordinators to query trial metrics, cohort velocity, and site bottlenecks in plain English safely. |
 
 <details>
 <summary>📸 <b>Click to expand high-resolution workflow screenshots</b></summary>

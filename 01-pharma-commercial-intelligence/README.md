@@ -1,6 +1,6 @@
 # Project 01: Pharma Commercial Intelligence & Next-Best-Action (NBA) Platform
 
-> **Target Employers**: Pfizer, AstraZeneca, Novartis, Johnson & Johnson, GSK  
+> **Target Organizations**: Commercial Biopharma Enterprises, Specialty Therapeutics & Life Sciences Organizations  
 > **Status**: Verified Full-Stack Local-First Implementation  
 > **Tech Stack**: Next.js 14 • FastAPI • LangGraph • Safe NL2SQL • XGBoost • PostgreSQL/pgvector • Redis • Sarvam AI • Docker Compose
 

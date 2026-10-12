@@ -1,7 +1,7 @@
 # Project 01: Implementation Blueprint & Execution Plan
 ## Pharma Commercial Intelligence & Next-Best-Action (NBA) Platform
 
-> **Target Employers**: Pfizer, AstraZeneca, Novartis, Johnson & Johnson, GSK  
+> **Target Organizations**: Commercial Biopharma Enterprises, Specialty Therapeutics & Life Sciences Organizations  
 > **Status**: Ready for Implementation  
 > **Governance Reference**: Follows all guidelines in [AGENTS.md](./AGENTS.md) and [Root AGENTS.md](../AGENTS.md).
 

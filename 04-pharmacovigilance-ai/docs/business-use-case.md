@@ -11,9 +11,9 @@ This platform acts as an **AI-driven safety triage and signal detection copilot*
 
 ---
 
-## 2. Target Industry & Employers
+## 2. Target Industry & Organizations
 - **Therapeutic Focus**: Global Pharmacovigilance, Patient Safety, Regulatory Risk Management.
-- **Target Employers**: Johnson & Johnson, Pfizer, Novartis, Roche, GSK, Sanofi, Bristol Myers Squibb, AstraZeneca.
+- **Target Organizations**: Post-Marketing Safety Divisions, Global Biopharma Enterprises, and Contract Safety Organizations.
 
 ---
 

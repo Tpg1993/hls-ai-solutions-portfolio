@@ -11,9 +11,9 @@ This platform acts as an **AI-powered commercial co-pilot** combining:
 
 ---
 
-## 2. Target Industry & Employers
+## 2. Target Industry & Organizations
 - **Therapeutic Focus**: High-value specialty pharma (Oncology, Cardiology, Immunology, Rare Disease).
-- **Target Employers**: Pfizer, AstraZeneca, Novartis, Johnson & Johnson, GlaxoSmithKline (GSK), Sanofi, Roche/Genentech.
+- **Target Organizations**: Commercial Biopharma Enterprises, Specialty Therapeutics & Life Sciences Divisions.
 
 ---
 

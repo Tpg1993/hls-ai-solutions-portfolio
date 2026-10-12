@@ -11,9 +11,9 @@ The **Regulatory Intelligence Copilot** is an enterprise intelligence system tha
 
 ---
 
-## 2. Target Industry & Employers
+## 2. Target Industry & Organizations
 - **Industry Scope**: Global Regulatory Affairs, CMC (Chemistry, Manufacturing, and Controls), Clinical Submissions, Compliance.
-- **Target Employers**: Pfizer, Roche/Genentech, Novartis, AstraZeneca, Johnson & Johnson, Sanofi, Bristol Myers Squibb.
+- **Target Organizations**: Global Biopharma Enterprises, Regulatory Affairs Consultancies, and Health Authority Submission Teams.
 
 ---
 

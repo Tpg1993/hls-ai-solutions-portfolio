@@ -11,9 +11,9 @@ This platform acts as an **intelligent clinical operations and matching engine**
 
 ---
 
-## 2. Target Industry & Employers
+## 2. Target Industry & Organizations
 - **Therapeutic Focus**: Clinical Operations (ClinOps), Oncology, Immunology, Clinical Development.
-- **Target Employers**: Pfizer, AstraZeneca, Novartis, Roche, Johnson & Johnson, Merck, Eli Lilly.
+- **Target Organizations**: Clinical Stage Biopharma Enterprises, Academic Medical Centers, and Contract Research Organizations (CROs).
 
 ---
 

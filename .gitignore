@@ -1,0 +1,82 @@
+# Environment variables and secrets (CRITICAL: ZERO SECRETS IN GIT)
+.env
+.env.*
+*.env
+*.env.*
+**/.env
+**/.env.*
+!*.env.example
+!**/.env.example
+*.pem
+*.key
+*.cert
+
+# Python virtual environments & bytecode
+__pycache__/
+**/__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+**/.venv/
+**/venv/
+build/
+dist/
+*.egg-info/
+.pytest_cache/
+**/.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+
+# Node & Next.js builds
+node_modules/
+**/node_modules/
+.next/
+**/.next/
+out/
+build/
+*.tsbuildinfo
+next-env.d.ts
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Databases & local persistent storage (Generated on startup / seeding)
+*.sqlite3
+*.sqlite
+*.db
+**/*.sqlite3
+**/*.sqlite
+**/*.db
+pgdata/
+redisdata/
+
+# Test reports & browser recording artifacts
+coverage/
+playwright-report/
+test-results/
+blob-report/
+playwright/.cache/
+selenium-reports/
+screenshots/
+videos/
+*.webp
+
+# IDE & OS files
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Temporary directories
+uploads/
+tmp/
+scratch/

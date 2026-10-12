@@ -1,0 +1,73 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: pgvector/pgvector:pg16
+    container_name: pv_postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres_secure_local_dev
+      POSTGRES_DB: pharmacovigilance
+    ports:
+      - "5435:5432"
+    volumes:
+      - postgres_pv_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d pharmacovigilance"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  redis:
+    image: redis:7.2-alpine
+    container_name: pv_redis
+    ports:
+      - "6382:6379"
+    volumes:
+      - redis_pv_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile.backend
+    container_name: pv_backend
+    restart: unless-stopped
+    ports:
+      - "8003:8000"
+    environment:
+      - DATABASE_URL=sqlite+aiosqlite:///pharmacovigilance.db
+      - SYNC_DATABASE_URL=sqlite:///pharmacovigilance.db
+      - REDIS_URL=redis://redis:6379/0
+      - SARVAM_API_KEY=${SARVAM_API_KEY}
+      - SARVAM_MODEL=sarvam-105b
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - OPENAI_MODEL=gpt-4o-mini
+      - OPENAI_FALLBACK_ENABLED=true
+      - JWT_SECRET_KEY=${JWT_SECRET_KEY:-pv_demo_secret_token_change_in_production}
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile.frontend
+    container_name: pv_frontend
+    restart: unless-stopped
+    ports:
+      - "3003:3000"
+    environment:
+      - NEXT_PUBLIC_API_BASE_URL=http://localhost:8003
+    depends_on:
+      - backend
+
+volumes:
+  postgres_pv_data:
+  redis_pv_data:

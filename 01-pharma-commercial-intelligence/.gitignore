@@ -1,0 +1,43 @@
+# Project-level gitignore
+.env
+.env.*
+*.env
+*.env.*
+!*.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+*.egg-info/
+.venv/
+venv/
+
+# Node
+node_modules/
+.next/
+out/
+npm-debug.log*
+
+# Databases
+*.db
+*.sqlite
+*.sqlite3
+
+# Test artifacts
+playwright-report/
+test-results/
+selenium-reports/
+screenshots/
+videos/
+*.webp
+
+# Data & local uploads
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+uploads/
+tmp/

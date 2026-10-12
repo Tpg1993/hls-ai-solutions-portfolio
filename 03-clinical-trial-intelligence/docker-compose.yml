@@ -1,0 +1,73 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: pgvector/pgvector:pg16
+    container_name: clinical_trials_postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres_secure_local_dev
+      POSTGRES_DB: clinical_trials
+    ports:
+      - "5434:5432"
+    volumes:
+      - postgres_clinical_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d clinical_trials"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  redis:
+    image: redis:7.2-alpine
+    container_name: clinical_trials_redis
+    ports:
+      - "6381:6379"
+    volumes:
+      - redis_clinical_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile.backend
+    container_name: clinical_trials_backend
+    restart: unless-stopped
+    ports:
+      - "8002:8000"
+    environment:
+      - DATABASE_URL=sqlite+aiosqlite:///clinical_trials.db
+      - SYNC_DATABASE_URL=sqlite:///clinical_trials.db
+      - REDIS_URL=redis://redis:6379/0
+      - SARVAM_API_KEY=${SARVAM_API_KEY}
+      - SARVAM_MODEL=sarvam-105b
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - OPENAI_MODEL=gpt-4o-mini
+      - OPENAI_FALLBACK_ENABLED=true
+      - JWT_SECRET_KEY=${JWT_SECRET_KEY:-clinical_trials_secret_key_change_in_production}
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile.frontend
+    container_name: clinical_trials_frontend
+    restart: unless-stopped
+    ports:
+      - "3002:3000"
+    environment:
+      - NEXT_PUBLIC_API_BASE_URL=http://localhost:8002
+    depends_on:
+      - backend
+
+volumes:
+  postgres_clinical_data:
+  redis_clinical_data:

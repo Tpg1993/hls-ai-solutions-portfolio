@@ -11,6 +11,25 @@
 
 ---
 
+## 🎥 Live Interactive Walkthrough
+
+![Clinical Trial Intelligence Walkthrough](../assets/demo/clinical_trial_intelligence_walkthrough.webp)
+
+<details>
+<summary>📸 View Key Workflow Screenshots</summary>
+
+| Protocol & Patient Explorer | Criterion-by-Criterion Verification |
+| :---: | :---: |
+| ![Landing](../assets/screenshots/03_clinical_trials_landing.png) | ![Matrix](../assets/screenshots/03_criterion_verification_matrix.png) |
+
+| Human Reviewer Sign-Off Modal | Site Accrual Risk Radar |
+| :---: | :---: |
+| ![Modal](../assets/screenshots/03_clinical_reviewer_signoff_modal.png) | ![Risk Radar](../assets/screenshots/03_site_risk_radar.png) |
+
+</details>
+
+---
+
 ## 1. Key Business Features
 
 1. **Criterion-by-Criterion Patient Screening**:

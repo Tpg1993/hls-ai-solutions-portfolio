@@ -67,6 +67,8 @@ selenium-reports/
 screenshots/
 videos/
 *.webp
+!assets/**
+!docs/assets/**
 
 # IDE & OS files
 .idea/

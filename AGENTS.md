@@ -1,6 +1,6 @@
 # AGENTS.md — Mandatory Engineering, Security, and Delivery Standards
 
-> **Scope**: This document governs all projects and coding agents within the HLS AI Solutions Portfolio. Antigravity and any coding agent MUST strictly read and adhere to these directives for every task, plan, and code modification. Treat this as an immutable engineering contract.
+> **Scope**: This document governs all projects and coding agents within the HLS AI Solutions Portfolio. All AI coding agents and engineers MUST strictly read and adhere to these directives for every task, plan, and code modification. Treat this as an immutable engineering contract.
 
 ---
 

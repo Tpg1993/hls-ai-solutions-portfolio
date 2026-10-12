@@ -60,6 +60,28 @@ graph TD
 
 ---
 
+## 🎥 Live Interactive Walkthrough & UI Showcase
+
+> **Full Clinical Trial Intelligence & Patient-Trial Matching Flow**:
+> Demonstrates real-time patient EHR eligibility screening, criterion verification matrix (`PASS`/`FAIL`/`UNKNOWN`), human-in-the-loop regulatory sign-off dialog, machine learning site risk radar, and read-only ClinOps NL2SQL querying:
+
+![Clinical Trial Intelligence Live Walkthrough](assets/demo/clinical_trial_intelligence_walkthrough.webp)
+
+<details>
+<summary>📸 <b>Click to expand high-resolution workflow screenshots</b></summary>
+
+| Clinical Trials Overview | Criterion Verification Matrix |
+| :---: | :---: |
+| ![Landing Page](assets/screenshots/03_clinical_trials_landing.png) | ![Criterion Verification](assets/screenshots/03_criterion_verification_matrix.png) |
+
+| Human-in-the-Loop Sign-Off Modal | Site Risk Radar & ClinOps NL2SQL |
+| :---: | :---: |
+| ![Reviewer Sign-Off Modal](assets/screenshots/03_clinical_reviewer_signoff_modal.png) | ![Site Risk Radar](assets/screenshots/03_site_risk_radar.png) |
+
+</details>
+
+---
+
 ## 2. Comprehensive Features & Functionality Comparison Matrix
 
 The table below contrasts the technical implementation, AI capabilities, and compliance controls across all four portfolio applications:
